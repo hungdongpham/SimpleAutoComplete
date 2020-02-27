@@ -8,8 +8,6 @@ import includes from 'lodash/includes';
 const pageErrorStatusCodes = ['unauthorized'];
 
 const host = process.env.GRAPHQL_HOST;
-const jobManagementHost = process.env.JOB_MANAGEMENT_GRAPHQL_HOST;
-const communicationHost = process.env.COMMUNICATION_SERVICE_GRAPHQL_HOST;
 
 const graphqlQueryRoot = process.env.GRAPHQL_QUERY_ROOT;
 
