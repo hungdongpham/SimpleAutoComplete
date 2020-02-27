@@ -8,8 +8,6 @@ import includes from 'lodash/includes';
 const pageErrorStatusCodes = ['unauthorized'];
 
 const host = process.env.GRAPHQL_HOST;
-const jobManagementHost = process.env.JOB_MANAGEMENT_GRAPHQL_HOST;
-const communicationHost = process.env.COMMUNICATION_SERVICE_GRAPHQL_HOST;
 
 const graphqlQueryRoot = process.env.GRAPHQL_QUERY_ROOT;
 
@@ -20,10 +18,6 @@ export const createClient = (endpoint, headers = {}, hostUrl = host) => new Grap
 const ajaxHost = process.env.AJAX_HOST || '';
 
 export const defaultClient = createClient(graphqlQueryRoot);
-
-export const jobManagementClient = createClient(graphqlQueryRoot,{}, jobManagementHost);
-
-export const communicationClient = createClient(graphqlQueryRoot,{}, communicationHost);
 
 export function post(url, data, headers = {}) {
   const body = data instanceof FormData ? data : JSON.stringify(data);
