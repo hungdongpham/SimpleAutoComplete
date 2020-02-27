@@ -19,10 +19,6 @@ const ajaxHost = process.env.AJAX_HOST || '';
 
 export const defaultClient = createClient(graphqlQueryRoot);
 
-export const jobManagementClient = createClient(graphqlQueryRoot,{}, jobManagementHost);
-
-export const communicationClient = createClient(graphqlQueryRoot,{}, communicationHost);
-
 export function post(url, data, headers = {}) {
   const body = data instanceof FormData ? data : JSON.stringify(data);
 
